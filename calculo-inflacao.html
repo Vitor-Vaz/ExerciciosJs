@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            function pula() {
+                document.write("<br>");
+            }
+
+            function diferenca(precoInit, precoHoje) {
+                var diferenca = precoHoje - precoInit;
+
+                return diferenca;
+            }
+
+            function inflacao(precoInit, diferenca) {
+
+                var inflacao = (diferenca * 100) / precoInit;
+
+                return inflacao;
+            }
+
+            function inflacaoMedia(inflaArroz, inflaCenoura, inflaTomate) {
+
+                var soma = (inflaArroz + inflaCenoura + inflaTomate) / 3;
+
+                return soma;
+            }
+
+            function inflaMediaDia(inflacao) {
+                
+                return inflacao / 6;
+            }
+
+            //PRECO DO TOMATE
+            var precoAntesT = 3.30;
+            var precoDepoisT = 4.70;
+
+            var difTomate = diferenca(precoAntesT, precoDepoisT);
+            var inflaTomate = inflacao(precoAntesT, difTomate);
+            var inflaMediaT = inflaMediaDia(inflaTomate);
+
+
+            //PRECO ARROZ
+            var precoAntesA = 2.99;
+            var precoDepoisA = 3.25;
+
+            var difArroz = diferenca(precoAntesA, precoDepoisA);
+            var inflaArroz = inflacao(precoAntesA, difArroz);
+            var inflaMediaA = inflaMediaDia(inflaArroz);
+
+            //PRECO CENOURA
+            var precoAntesC = 3.99;
+            var precoDepoisC = 4.14;
+
+            var difCenouraC = diferenca(precoAntesC, precoDepoisC);
+            var inflaCenouraC = inflacao(precoAntesC, difCenouraC);
+            var inflaMediaC = inflaMediaDia(inflaCenouraC);
+
+            document.write("O Tomate teve um aumento de " + Math.round(inflaTomate) + "%");
+            pula();
+            document.write("O ARROZ teve um aumento de " + Math.round(inflaArroz) + "%");
+            pula();
+            document.write("O CENOURA teve um aumento de " + Math.round(inflaCenouraC) + "%");
+            pula();
+            pula();
+
+            var media = inflacaoMedia(inflaTomate, inflaArroz, inflaCenouraC);
+            document.write("A inflação média dos alimentos é de: " + Math.round(media) + "%");
+            pula();
+            pula();
+            document.write("A variação diária do preço do tomate foi: " + Math.round(inflaMediaT) + "%");
+            pula();
+            document.write("A variação diária do preço do arroz foi: " + Math.round(inflaMediaA) + "%");
+            pula();
+            document.write("A variação diária do preço do cenoura foi: " + Math.round(inflaMediaC) + "%");
+        </script>
+
+    </body>
+</html>
