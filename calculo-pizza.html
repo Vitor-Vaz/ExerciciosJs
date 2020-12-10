@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>preço das pizzas</title>
+    </head>
+    <body>
+            <script>
+                function pula() {
+                    document.write("<br>");
+                }
+
+                var pizzaValor = prompt("Digite o preço da pizza: ");
+                var pizzaVenda = prompt("Digite o valor de venda da pizza: ");
+                var pizzaNome = prompt("Digite o nome da pizza: ");
+                var imposto = (pizzaValor * 8.9)/ 100;
+                var lucro = pizzaVenda - pizzaValor;
+                pula()
+                document.write("Para a pizza "+pizzaNome+", o lucro líquido é de R$"+lucro+", e o imposto é de R$ "+imposto);
+
+            </script>
+        </body>
+    </html>
