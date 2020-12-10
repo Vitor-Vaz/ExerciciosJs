@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laranjinhas *-*</title>
+</head>
+<body>
+
+        <script>
+            function pula() {
+                document.write("<br>");
+            }
+
+
+            var quantLaranjas = prompt("Me fala quantas laranjas tu tem ai: ");
+            var quantVizinhos = prompt("Me fala quantos manos tu tem ai: ");
+
+            var sobra = quantLaranjas % quantVizinhos;
+            var divisao = quantLaranjas / quantVizinhos;
+            document.write("A sobra é: "+ sobra);
+            pula()
+            document.write("A divisão é: "+ Math.round(divisao));
+
+        </script>
+
+
+</body>
+</html>
