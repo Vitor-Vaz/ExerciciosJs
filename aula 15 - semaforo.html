@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aula 15 - Semaforor</title>
+    </head>
+    <body>
+        <script>
+            /* Semáforo: faça uma função que recebe como parâmetro as strings "verde", "amarelo" ou
+"vermelho". Caso o parâmetro passado seja "verde", a função deve retornar "pode passar!", caso
+seja "amarelo", retorna "melhor freiar", caso seja "vermelho", "pare já!". Mostre no console o
+resultado desta função com os parâmetros a sua escolha. Teste todas as saídas possíveis. */
+
+            function sinal(sinal) {
+                var result;
+                switch (sinal) {
+                    case "vermelho":
+                        result = "pare já!";
+                        break;
+                    case "amarelo":
+                        result = "melhor freiar";
+                        break;
+                    case "vermelho":
+                        result = "pode passar";
+                        break;
+                }
+                return result;
+            }
+
+            console.log(sinal("amarelo"));
+        </script>
+
+    </body>
+</html>
