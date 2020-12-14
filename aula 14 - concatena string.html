@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            /* Concatena strings: Crie uma função que recebe como parâmetro duas strings. Essa função deve
+retornar as duas strings concatenadas ("juntadas") separadas por um espaço. Utilize
+document.write fora da função para escrever na tela o resultado desta função com os parâmetros
+de teste "Olá" e "Mundo!" */
+
+            var frase1 = prompt("Digite a primeira frase: ");
+            var frase2 = prompt("Digite a segunda frase: ");
+
+            function concatena(primeira, segunda) {
+                var espaco = " ";
+
+                return primeira+espaco+segunda;
+            }
+
+            document.write(concatena(frase1, frase2));
+
+
+        </script>
+    </body>
+</html>
