@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Menu bebidas</title>
+
+    </head>
+    <body>
+
+        <script>
+
+            function menu(bebidas) {
+
+                switch (bebidas) {
+                    case 1:
+                        console.log("Você escolheu a opção "+bebidas+" - refrigerante");
+                        break;
+                    case 2:
+                        console.log("Você escolheu a opção "+bebidas+" - suco");
+                        break;
+                    case 3:
+                        console.log("Você escolheu a opção "+bebidas+" - água");
+                        break;
+                    default:
+                        console.log("Você escolheu a opção "+bebidas+" Não temos nenhuma bebida com esse código");
+                        break;
+                }
+            }
+
+            function pulaLinha() {
+                document.write("<br><br>");
+            }
+
+            function mostra(frase) {
+                pulaLinha();
+            }
+            
+            function exibeMenu() {
+                console.log("Menu - Bebidas \r\n 1 - Refrigerante \r\n 2- Suco \r\n 3 - Água");
+            }
+
+            mostra(exibeMenu());
+
+            //menu(1);
+        </script>
+
+    </body>
+</html>
