@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+
+            var frase = prompt("Digite uma frase").toLowerCase();
+            var desloc = parseInt(prompt("Digite a quantidade de deslocamento"));
+
+            var novaFrase = [];
+            var fraseFinal = "";
+
+            //bloco que trata o deslocamento impedindo que saia do alfabeto
+            while (desloc > 26) {
+                desloc = desloc - 26;
+                //console.log(desloc);
+            }
+
+            //bloco que converte um strin para um array de numeros da tabela ascii de acordo com o deslocamento e retorna a conversão
+
+            for (i = 0; i < frase.length; i++) {
+                if (frase[i] == " ") {
+                    novaFrase[i] = frase.charCodeAt(i);
+                    fraseFinal = fraseFinal + String.fromCharCode(novaFrase[i]);
+                } else {
+                    novaFrase[i] = frase.charCodeAt(i);
+                    //console.log(novaFrase[i]);
+                    novaFrase[i] += desloc;
+                    //esse if previne que o numero da tabela ascii não ultrapasse o alfabeto
+                    if (novaFrase[i] > 122) {
+                        novaFrase[i] -= 26;
+                    }
+                    fraseFinal = fraseFinal + String.fromCharCode(novaFrase[i]);
+                }
+
+            }
+
+            //console.log(novaFrase);
+            console.log(fraseFinal);
+        </script>
+
+    </body>
+</html>
